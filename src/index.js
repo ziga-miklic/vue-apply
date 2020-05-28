@@ -1,11 +1,12 @@
 const VueApply = {
   install(Vue) {
     Vue.directive('apply', {
-      bind(el, binding) {
+      bind(el, binding, vnode) {
         let modifier = ''
         let indentation = 0
+        let styles = binding.value || vnode.context.$options.style
 
-        binding.value.split('\n').forEach(item => {
+        styles.split('\n').forEach(item => {
           const cleanedItem = item.trim()
           const itemIndentation = item.length - item.trimStart().length
           const isModifier = cleanedItem.slice(-1) === ':'

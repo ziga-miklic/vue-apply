@@ -15,28 +15,58 @@ import VueApply from 'vue-apply'
 Vue.use(VueApply)
 ```
 
-## Example
+## Example (single)
 
 ```vue
 <template>
-  <h2 v-apply="heading">Heading</h2>
+  <h2 v-apply>Heading</h2>
+</template>
+
+<script>
+export default {
+  style: `
+    text-sm
+    mb-1
+    md:
+      text-base
+      mb-2
+    lg:
+      text-xl
+      mb-3
+  `
+}
+</script>
+```
+
+## Example (multiple)
+
+```vue
+<template>
+  <div>
+    <h1 v-apply="heading">Heading</h1>
+    <p v-apply="paragraph">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, necessitatibus!
+    </p>
+  </div>
 </template>
 
 <script>
 export default {
   styles: {
     heading: `
-      text-sm
-      mb-1
-      md:
-        text-base
-        mb-2
-      lg:
-        text-xl
-        mb-3
+      text-gray-900
+      text-xl
+      mb-3
+    `,
+    paragraph: `
+      text-lg
+      text-gray-600
+      leading-relaxed
     `
   }
 }
+</script>
+
 </script>
 ```
 
