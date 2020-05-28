@@ -38,6 +38,12 @@ export default {
 </script>
 ```
 
+This above code will render:
+
+```html
+<h2 class="text-sm mb-1 md:text-base md:mb-2 lg:text-xl lg:mb-3">Heading</h2>
+```
+
 ## Example (multiple)
 
 ```vue
@@ -73,5 +79,8 @@ export default {
 This above code will render:
 
 ```html
-<h2 class="text-sm mb-1 md:text-base md:mb-2 lg:text-xl lg:mb-3">Heading</h2>
+<h1 class="text-gray-900 text-xl mb-3">Heading</h1>
+<p class="text-lg text-gray-600 leading-relaxed">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, necessitatibus!
+</p>
 ```
